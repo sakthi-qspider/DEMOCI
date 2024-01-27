@@ -47,7 +47,7 @@ public class BaseClass {
 		
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Long.parseLong(ConfigReader.getConfig("PageLoad"))));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(ConfigReader.getConfig("ImplicitWait"))));
-		System.out.println(ConfigReader.getConfig("ImplicitWait"));
+		System.out.println("Wait Time"+ConfigReader.getConfig("ImplicitWait"));
 		
 	}
 	
