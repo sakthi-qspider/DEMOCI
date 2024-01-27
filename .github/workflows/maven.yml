@@ -34,6 +34,11 @@ jobs:
       with:
         name: testng-reports
         path: target/surefire-reports
+    - name: Download TestNG reports
+      uses: actions/download-artifact@v2
+      with:
+        name: testng-reports
+        path: target/surefire-reports
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
    # - name: Update dependency graph
