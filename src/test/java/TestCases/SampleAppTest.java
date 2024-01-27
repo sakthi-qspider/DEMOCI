@@ -17,6 +17,7 @@ public class SampleAppTest extends BaseClass {
 	public void verifyAutomobile() throws Exception {
 		
 		HomePage page=new HomePage(driver);
+		
 		page.clickAutomobile();
 		
 	}

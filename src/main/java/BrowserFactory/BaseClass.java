@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -29,8 +30,10 @@ public class BaseClass {
 			driver=new ChromeDriver(options);
 			
 		}else if(ConfigReader.getConfig("browser").equalsIgnoreCase("Firefox")) {
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--headless");
 			
-			driver=new FirefoxDriver();
+			driver=new FirefoxDriver(options);
 			
 		}else if(ConfigReader.getConfig("browser").equalsIgnoreCase("IE")) {
 			
